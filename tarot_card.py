@@ -5,7 +5,7 @@ from telebot import types
 def setup_tarot_handlers(bot):
     @bot.message_handler(func=lambda message: True)
     def handle_button(message):
-        if message.text == "🔮 Вытащить карту дня":
+        if message.text == "🔮 Вытащить карту дня" or message.text == "/tarot_card":
             card_id = random.randint(1, 78)
             is_upright = random.choice([True, False])
 
